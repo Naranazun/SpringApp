@@ -7,8 +7,26 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
+<context:property-placeholder location="classpath:musicPlayer.properties"/>
     <bean id="musicBean"
-          class="ru.ochirova.springcource.ClassicalMusic">
+          class="ru.ochirova.springcource.ClassicalMusic"
+    init-method="doMyInit"
+    destroy-method="doMyDestroy"
+    factory-method="getClassicalMusic">
     </bean>
-
+<!--    <bean id="song1" class="ru.ochirova.springcource.ClassicalMusic"/>-->
+<!--    <bean id="song2" class="ru.ochirova.springcource.RockMusic"/>-->
+<!--    <bean id="song3" class="ru.ochirova.springcource.CountryMusic"/>-->
+    <bean id="musicPlayer"
+    class="ru.ochirova.springcource.MusicPlayer" scope="prototype">
+<!--        <property name="musicList">-->
+<!--        <list>-->
+<!--            <ref bean="song1"/>-->
+<!--            <ref bean="song2"/>-->
+<!--            <ref bean="song3"/>-->
+<!--        </list>-->
+<!--    </property>-->
+<!--        <property name="name" value="${musicPlayer.name}"/>-->
+<!--        <property name="volume" value="${musicPlayer.volume}"/>-->
+    </bean>
 </beans>
