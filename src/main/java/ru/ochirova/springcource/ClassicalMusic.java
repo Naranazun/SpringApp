@@ -7,8 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
-@Component
-
 public class ClassicalMusic implements  Music {
     @PostConstruct
 public void doMyInit(){

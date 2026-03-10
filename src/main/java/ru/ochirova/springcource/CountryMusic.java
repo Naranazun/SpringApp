@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+
 public class CountryMusic implements Music {
     private List<String> songs=new ArrayList<>();{
         songs.add("Act Naturally");
